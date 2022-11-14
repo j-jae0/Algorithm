@@ -1,6 +1,7 @@
 def solution(citations):
-    citations.sort()
-    for idx , citation in enumerate(citations):
-        if citation >= len(citations) - idx :
-            return len(citations) - idx
-    return 0
+
+    for i , c in enumerate(sorted(citations, reverse=True)):
+        if i >= c:
+            return i
+        
+    return len(citations)
