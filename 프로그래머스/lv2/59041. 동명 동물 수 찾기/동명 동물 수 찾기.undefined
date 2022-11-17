@@ -1,0 +1,13 @@
+-- 코드를 입력하세요
+# SELECT NAME, COUNT(*)
+# FROM ANIMAL_INS
+# GROUP BY NAME
+# HAVING NAME IS NOT NULL
+# ORDER BY NAME
+
+select name, count(*)
+from animal_ins
+where name is not null
+group by name
+having count(*) >= 2
+order by name
