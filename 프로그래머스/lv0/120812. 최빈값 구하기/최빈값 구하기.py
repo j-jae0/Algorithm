@@ -1,3 +1,5 @@
+import pandas as pd
+import numpy as np
 def solution(array):
     
     # 정수를 딕셔너리의 key 값으로 설정한다.
@@ -21,3 +23,6 @@ def solution(array):
         # key값과 value 값을 뒤집는다.
         r_arr_dict = dict(map(reversed, arr_dict.items()))
         return r_arr_dict[answer]
+
+    # df = pd.Series(array)
+    # return df.mode()
