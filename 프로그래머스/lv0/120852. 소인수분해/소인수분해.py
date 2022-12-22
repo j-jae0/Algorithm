@@ -10,6 +10,10 @@ def solution(n):
             if num % i == 0:
                 answer.append(i)
                 num = int(num / i)
+            if num < 2:
+                break
+        if num < 2:
+            break
     # sorted 함수 사용안하면 특정 테스트에서 오답 뜬다.
     # 오답 : 테스트 6, 8, 12, 24
     return sorted(list(set(answer)))
