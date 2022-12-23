@@ -1,10 +1,6 @@
 def solution(sides):
+    sorted_sides = sorted(sides, reverse=True)
+    large_s = sorted_sides[0]
+    other_sum_s = sum(sorted_sides[1:])
     
-    s = sorted(sides, reverse=True)
-    l = s[0]
-    o = sum(s[1:])
-    
-    if l >= o:
-        return 2
-    else:
-        return 1
+    return 2 if large_s >= other_sum_s else 1
