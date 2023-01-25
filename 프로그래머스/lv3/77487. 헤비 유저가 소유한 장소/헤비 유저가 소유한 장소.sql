@@ -1,0 +1,7 @@
+-- 코드를 입력하세요
+SELECT T1.ID, T1.NAME, T1.HOST_ID
+FROM PLACES AS T1
+  INNER JOIN (SELECT HOST_ID 
+              FROM PLACES 
+              GROUP BY HOST_ID 
+              HAVING COUNT(*) > 1) AS T2 ON T1.HOST_ID = T2.HOST_ID
