@@ -1,3 +1,2 @@
-def solution(message):
-    
+def solution(message):   
     return len(message)*2
