@@ -1,4 +1,3 @@
 def solution(n):
-    num = str(n)
-    nums = [int(x) for x in num]
+    nums = [int(x) for x in str(n)]
     return sum(nums)
