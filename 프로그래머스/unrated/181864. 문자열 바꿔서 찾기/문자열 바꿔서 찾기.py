@@ -1,6 +1,3 @@
 def solution(myString, pat):
-    newString = ''
-    for s in myString:
-        if s == 'A': newString += 'B'
-        else: newString += 'A'
-    return 1 if pat in newString else 0
+    pat = ''.join(['A' if p == 'B' else 'B' for p in pat])
+    return 1 if pat in myString else 0
