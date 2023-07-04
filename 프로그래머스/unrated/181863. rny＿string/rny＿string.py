@@ -1,6 +1,2 @@
 def solution(rny_string):
-    answer = ''
-    for s in rny_string:
-        if s == 'm': answer += 'rn'
-        else: answer += s
-    return answer
+    return ''.join(['rn' if s == 'm' else s for s in rny_string])
