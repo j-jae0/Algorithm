@@ -4,7 +4,7 @@ def solution(arr):
         if len(stk) == 0:
             stk.append(arr[i])
         elif stk[-1] == arr[i]:
-            stk = stk[:-1]
+            stk.pop()
         else:
             stk.append(arr[i])
     return stk if len(stk) > 0 else [-1]
