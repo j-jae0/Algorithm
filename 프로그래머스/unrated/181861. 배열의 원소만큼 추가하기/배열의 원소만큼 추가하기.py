@@ -1,6 +1,2 @@
 def solution(arr):
-    l = []
-    for n in arr:
-        for _ in range(n):
-            l.append(n)
-    return l
+    return [i for i in arr for j in range(i)]
