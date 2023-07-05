@@ -1,9 +1,10 @@
 def solution(arr, flag):
     l = []
-    for a, f in zip(arr, flag):
+    for i, f in zip(arr, flag):
         if f:
-            for _ in range(a):
-                l.extend([a, a])
+            for j in range(i):
+                l.append(i)
+                l.append(i)
         else:
-            l = l[:-a]
+            l = l[:-i]
     return l
