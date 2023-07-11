@@ -1,10 +1,9 @@
 def solution(name, yearning, photo):
-    dic = {n:y for n, y in zip(name, yearning)}
-    l = []
-    for p in photo:
-        point = 0
-        for n in p:
-            if n in name:
-                point += dic[n]
-        l.append(point)
-    return l
+    answer = []
+    for one_photo in photo:
+        memory_point = 0
+        for person in one_photo:
+            if person in name:
+                memory_point += yearning[name.index(person)]
+        answer.append(memory_point)
+    return answer
