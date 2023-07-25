@@ -6,5 +6,5 @@ def solution(k, m, score):
         if len(box) // m == 1:
             apple_box.append(box)
             box = []
-    return sum([len(apples) * min(apples) for apples in apple_box])
+    return sum([min(apples) for apples in apple_box]) * m
             
