@@ -13,8 +13,7 @@ def solution(keymap, targets):
                 answer.append(-1)
                 new_list = []
                 break
-            else:
-                new_list.append(keys[t])
+            new_list.append(keys[t])
         if len(new_list):
             answer.append(sum(new_list))
     return answer
